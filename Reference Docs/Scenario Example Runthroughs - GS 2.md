@@ -1,0 +1,22 @@
+Scenario list for testing – 6/30/2026
+- Send Scheduled Billable for $100.00 without assets. Match billing to contract main billing. In Aspire, the effect will be a scheduled billable that is not associated with any assets, and will not be prorated.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49703
+- Flag  “Follow Rent” to “Match billing to contract main billing”, if this isn’t the case, easy to pivot by entering a first payment date
+- Send Scheduled Billable for $100, assigned to one asset. Match billing to contract main billing.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49704
+- Send Scheduled Billable for $100, assign $25 to one asset and $75 to the other. Match billing to contract main billing.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49707
+- Send Scheduled Billable for $100, assign $33.33 to one asset and $66.67 to the other. Change billing to Advanced billing, 30 day invoice lead, 30 day delinquency at 15%, and consolidated invoice code.
+- Example: Should be the same as above(with different dollar amounts), need to understand when “Advanced” billing is used, and where the del codes come into play. Assuming we grab these from Contracts, but will have to ask for clarification.
+- Send Scheduled Billable for $100, selecting all assets. Match billing to contract main billing. In Aspire, the amount specified will be prorated across all assets, proportionally.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49708
+- Checkbox “All Assets” used to determine this branch. Using the proration flag, this checkbox should be all we need.
+- Send Schedule Billable for $100, assign to 2 assets proportionally. Change billing to 30 day invoice lead, 15 day delinquency at 15%, not consolidated. End after 3 months.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49709
+- Unsure about the invoice lead and delinquency pieces in terms of how they will be decided by the end user, but relevant flags available to diverge.
+- Send Scheduled Billable for $100 without assets, matching billing to contract main billing, for remainder of contract’s term.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49710
+- Has 100 fee amount, no serial selected, and “All Assets” set to false, believe these are the conditions to send “Without assets”. Left “Number of occurrences” blank, as this could be the indicator that it does not end until the contract does.
+- Send Scheduled Billable for $100, assign to 2 assets, matching billing to contract main billing, for remainder of contract’s term.
+- Example: https://waterdesk.teamdesk.net/secure/db/76449/preview.aspx?t=1110357&id=49711
+- Has 2 fee records each with $50 and the recurring flags marked as they were above.

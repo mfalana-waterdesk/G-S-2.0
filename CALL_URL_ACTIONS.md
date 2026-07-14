@@ -27,7 +27,7 @@ TeamDesk's Call URL fires **per record**. Since each Fee record represents one l
 - Multi-asset splits (Scenarios 3, 4, 8) → each asset is its own Scheduled Billable
 - Limitation: You can't combine multiple assets into one billable in a single call
 
-### Option B: Grouped call from parent G&S record (COMPLEX — PHASE 2)
+### Option B: Grouped call from parent G&S record (COMPLEX — BUILT)
 - Build a summary/formula column on the parent that concatenates all Fee data into one JSON
 - Use passthrough `<%* [JSON Summary Column] %>` to inject it
 - Handles multi-asset grouping but requires more formula plumbing
@@ -292,7 +292,7 @@ This lets you validate payload structure without risking Aspire data.
 | 1 | null | false | false | no | DoNotRelateAssets=true, full Payments |
 | 2 | set | false | false | no | 1 asset, full Payments |
 | 3 | set (x2) | false | false | no | 2 separate calls, 1 asset each |
-| 4 | set (x2) | false | false | no | Same as 3 + custom billing (Phase 2) |
+| 4 | set (x2) | false | false | no | Same as 3 + custom billing (pending) |
 | 5 | null | **true** | false | no | Empty RelatedAssets, DoNotRelate=false |
 | 6 | set (x2) | false | false | **yes** | 2 calls, each with Occurrences + Frequency |
 | 7 | null | false | **true** | — | DoNotRelateAssets=true, Amount-only Payments |
